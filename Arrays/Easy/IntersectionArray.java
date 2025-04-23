@@ -4,6 +4,9 @@ public class IntersectionArray {
     public static void printIntersection(int[] arr1, int[] arr2) {
         int i = 0, j = 0;
         int n = arr1.length, m = arr2.length;
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        boolean found = false;
 
         while (i < n && j < m) {
             // Skip duplicates in arr1
@@ -18,6 +21,7 @@ public class IntersectionArray {
 
             if (arr1[i] == arr2[j]) {
                 System.out.print(arr1[i] + " ");
+                found = true;
                 i++;
                 j++;
             } else if (arr1[i] < arr2[j]) {
@@ -25,6 +29,9 @@ public class IntersectionArray {
             } else {
                 j++;
             }
+        }
+        if(!found){
+            System.out.println("No Intersection found");
         }
     }
 
