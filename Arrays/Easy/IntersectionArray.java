@@ -11,6 +11,10 @@ public class IntersectionArray {
                 i++;
                 continue;
             }
+            if (j > 0 && arr2[j] == arr2[j - 1]) {
+                j++;
+                continue;
+            }
 
             if (arr1[i] == arr2[j]) {
                 System.out.print(arr1[i] + " ");
