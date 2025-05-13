@@ -8,9 +8,7 @@ class Solution {
             if(i!=0 && arr[i]==arr[i-1]){
                 continue;
             }
-            if(arr[i]>0){
-                break;
-            }
+            
             int j = i+1;
             int k = n-1;
             while(j<k){
